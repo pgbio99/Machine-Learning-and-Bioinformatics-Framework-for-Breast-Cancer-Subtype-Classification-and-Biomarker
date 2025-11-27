@@ -4,6 +4,7 @@ getwd()
 install.packages("ggplot2")
 library(ggplot2)
 
+# Generating volcano plt for significant genes of GSE57297 dataset
 data <- read.csv("sign.genes.csv", header = TRUE)
 colnames(data)
 
@@ -23,4 +24,5 @@ ggplot(data, aes(x = logFC, y = -log10(adj.P.Val), color=Regulation))+
        y="-log10(adj.P.Val)",
        color="Regulation") +
   geom_vline(xintercept = c(-logFC.threshold, logFC.threshold), linetype="dashed", color="black") +
+
   geom_hline(yintercept = -log10(padj.threshold), linetype="dashed", color="black")
