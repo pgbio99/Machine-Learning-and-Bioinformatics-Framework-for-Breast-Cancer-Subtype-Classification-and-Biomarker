@@ -3,7 +3,7 @@
 📌 Overview
 
 This project presents an integrative approach combining **bioinformatics analysis** and **machine learning models** to identify reliable biomarkers and classify molecular subtypes of **breast cancer** (BRCA) using **microarray gene expression data** from GEO datasets.
-By leveraging tools such as differential expression analysis, protein-protein interaction networks, survival analysis, and supervised machine learning (Random Forest & KNN), the study uncovers 35 potential subtype-specific biomarkers and evaluates their diagnostic and prognostic significance.
+By leveraging tools such as differential expression analysis, protein-protein interaction networks, survival analysis, and supervised machine learning (Random Forest & KNN), the study uncovers 2 potential subtype-specific robust biomarkers and evaluates their diagnostic and prognostic significance.
 
 🔬 Objectives
 
@@ -29,28 +29,19 @@ Perform subtype-specific DEG analysis to find unique molecular signatures, follo
  **10 hub genes** highlighted from the PPI network (e.g., KIT, TPM3, MYLK, COL10A1)
  **Survival analysis** confirmed clinical significance of multiple genes.
   
-🧠 Machine Learning Models
+🧠 Machine Learning Models 
+This table presents the Mean ($\bar{x}$) and Standard Deviation ($\sigma$) over 20 runs.
 
-| Model         | Accuracy | F1 Score | Sensitivity | Specificity |
-|---------------|----------|----------|-------------|-------------|
-| Random Forest | ~91%     | ~89%     | ~90%        | ~92%        |
-| KNN           | ~86%     | ~84%     | ~85%        | ~87%        |
+|    Model      |  Accuracy   |   F1 Score  |   AUC-OVR   | 
+|---------------|-------------|-------------|-------------|
+| Random Forest | 0.788|0.114 | 0.773|0.124 | 0.910|0.079 |
+| KNN           | 0.877|0.084 | 0.867|0.088 | 0.916|0.069  | 
 
-- **Random Forest** showed superior performance on microarray data.
+- **KNN** showed superior performance on microarray data.
 - Feature importance was used to prioritize candidate biomarker genes.
 
 **5276 subtype specific DEGs** involved in ML modeling
- **35 candidate biomarkers** prioritized via ML, including:  
-  `TMEM45B`, `POF1B`, `STIL`, `DNA2`, `E2F7`, `RARA`, `HSPA5`, etc.
+ **2 candidate biomarkers** prioritized via ML, including:  
+  'PNMT', 'KRTAP10-8'
 
- 📂 Project Structure
 
- BRCA-Subtype-Classification/
-│
-├── README.md                          
-├── Random_Forest_BRCA_Subtypes.ipynb 
-├── Project_Report_Prashansha_Goel.pdf
-│
-├── data/                              
-    ├── GSE86374_normalized.csv
-    └── GSE57297_normalized.csv
