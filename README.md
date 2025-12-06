@@ -30,12 +30,11 @@ Perform subtype-specific DEG analysis to find unique molecular signatures, follo
  **Survival analysis** confirmed clinical significance of multiple genes.
   
 🧠 Machine Learning Models 
-This table presents the Mean ($\bar{x}$) and Standard Deviation ($\sigma$) over 20 runs.
 
-|    Model      |  Accuracy   |   F1 Score  |   AUC-OVR   | 
-|---------------|-------------|-------------|-------------|
-| Random Forest | 0.788|0.114 | 0.773|0.124 | 0.910|0.079 |
-| KNN           | 0.877|0.084 | 0.867|0.088 | 0.916|0.069  | 
+|    Model      | Accuracy | F1 Score | AUC-OVR | 
+|---------------|----------|----------|---------|
+| Random Forest |   ~79%   |   ~77%   |   ~91%  |
+| KNN           |   ~88%   |   ~87%   |   ~92%  | 
 
 - **KNN** showed superior performance on microarray data.
 - Feature importance was used to prioritize candidate biomarker genes.
